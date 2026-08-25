@@ -1,0 +1,6 @@
+{
+  "name": "Kanoon & Customer Hub - Android Studio Studio",
+  "description": "Customer Registration, KYC (Aadhaar/PAN), Signature & Photo, Service Fees, Room SQLite Database, CSV Export, and Complete Android Studio Project Generator & Downloader with Material 3.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,185 @@
+import { Customer } from '../types';
+
+export const SAMPLE_SIGNATURE_1 = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='70' viewBox='0 0 200 70'><path d='M20,45 Q40,10 60,40 T100,30 Q120,55 150,25 T180,40' fill='none' stroke='%231e3a8a' stroke-width='2.5' stroke-linecap='round'/></svg>";
+export const SAMPLE_SIGNATURE_2 = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='70' viewBox='0 0 200 70'><path d='M30,35 Q60,60 90,20 T140,50 T180,30' fill='none' stroke='%230f766e' stroke-width='2.5' stroke-linecap='round'/></svg>";
+
+export const INITIAL_CUSTOMERS: Customer[] = [
+  {
+    id: "cust-101",
+    customerCode: "CUST-2026-001",
+    fullName: "Rajesh Sharma",
+    phone: "+91 98765 43210",
+    email: "rajesh.sharma@example.com",
+    gender: "Male",
+    dob: "1988-06-15",
+    address: "Flat 402, Green Valley Apartments, MG Road",
+    city: "Bengaluru",
+    state: "Karnataka",
+    pincode: "560001",
+    aadhaarNumber: "784512903456",
+    panNumber: "ABCPS1234K",
+    isAadhaarVerified: true,
+    isPanVerified: true,
+    photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=250",
+    signatureUrl: SAMPLE_SIGNATURE_1,
+    createdAt: "2026-08-10T10:30:00Z",
+    updatedAt: "2026-08-10T10:30:00Z",
+    status: "Active",
+    notes: "Regular client for annual GST compliance and trademark filings.",
+    services: [
+      {
+        id: "srv-201",
+        customerId: "cust-101",
+        serviceName: "GST Annual Filing & Audit",
+        serviceCategory: "Taxation",
+        feeAmount: 7500,
+        paidAmount: 7500,
+        paymentStatus: "Paid",
+        paymentMode: "UPI",
+        serviceDate: "2026-08-10",
+        invoiceNumber: "INV-2026-001",
+        notes: "GSTR-9 and 9C successfully submitted."
+      },
+      {
+        id: "srv-202",
+        customerId: "cust-101",
+        serviceName: "Trademark Class 35 Registration",
+        serviceCategory: "Licensing",
+        feeAmount: 9000,
+        paidAmount: 5000,
+        paymentStatus: "Partial",
+        paymentMode: "Bank Transfer",
+        serviceDate: "2026-08-18",
+        invoiceNumber: "INV-2026-008",
+        notes: "Pending TM examiner response."
+      }
+    ]
+  },
+  {
+    id: "cust-102",
+    customerCode: "CUST-2026-002",
+    fullName: "Priya Venkatesh",
+    phone: "+91 91234 56789",
+    email: "priya.v@innovatetech.io",
+    gender: "Female",
+    dob: "1994-11-22",
+    address: "Plot 12, HITEC City, Phase 2",
+    city: "Hyderabad",
+    state: "Telangana",
+    pincode: "500081",
+    aadhaarNumber: "901245781234",
+    panNumber: "BVPPV9876R",
+    isAadhaarVerified: true,
+    isPanVerified: true,
+    photoUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=250",
+    signatureUrl: SAMPLE_SIGNATURE_2,
+    createdAt: "2026-08-14T14:15:00Z",
+    updatedAt: "2026-08-14T14:15:00Z",
+    status: "Active",
+    notes: "Private Limited Company incorporation and MSME registration.",
+    services: [
+      {
+        id: "srv-203",
+        customerId: "cust-102",
+        serviceName: "Pvt Ltd Company Incorporation (SPICe+)",
+        serviceCategory: "Registration",
+        feeAmount: 14500,
+        paidAmount: 14500,
+        paymentStatus: "Paid",
+        paymentMode: "UPI",
+        serviceDate: "2026-08-14",
+        invoiceNumber: "INV-2026-002",
+        notes: "Certificate of Incorporation issued by MCA."
+      }
+    ]
+  },
+  {
+    id: "cust-103",
+    customerCode: "CUST-2026-003",
+    fullName: "Amitabh Choudhury",
+    phone: "+91 97112 34567",
+    email: "amitabh.c@lawchambers.in",
+    gender: "Male",
+    dob: "1979-03-08",
+    address: "24 Park Street, Flat 3B",
+    city: "Kolkata",
+    state: "West Bengal",
+    pincode: "700016",
+    aadhaarNumber: "453289017654",
+    panNumber: "ACFPC4567M",
+    isAadhaarVerified: true,
+    isPanVerified: false,
+    photoUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=250",
+    signatureUrl: SAMPLE_SIGNATURE_1,
+    createdAt: "2026-08-20T09:00:00Z",
+    updatedAt: "2026-08-21T11:45:00Z",
+    status: "Pending Verification",
+    notes: "Property Conveyance Deed drafting and Title Verification.",
+    services: [
+      {
+        id: "srv-204",
+        customerId: "cust-103",
+        serviceName: "Property Title Search & Legal Opinion",
+        serviceCategory: "Legal",
+        feeAmount: 12000,
+        paidAmount: 0,
+        paymentStatus: "Pending",
+        paymentMode: "Cheque",
+        serviceDate: "2026-08-20",
+        invoiceNumber: "INV-2026-003",
+        notes: "Awaiting sub-registrar search report."
+      }
+    ]
+  },
+  {
+    id: "cust-104",
+    customerCode: "CUST-2026-004",
+    fullName: "Sunita Patel",
+    phone: "+91 98980 11223",
+    email: "sunita.patel@gujarattextiles.co",
+    gender: "Female",
+    dob: "1985-09-30",
+    address: "55 Ashram Road, Navrangpura",
+    city: "Ahmedabad",
+    state: "Gujarat",
+    pincode: "380009",
+    aadhaarNumber: "671234985012",
+    panNumber: "AELPP5512B",
+    isAadhaarVerified: true,
+    isPanVerified: true,
+    photoUrl: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=250",
+    signatureUrl: SAMPLE_SIGNATURE_2,
+    createdAt: "2026-08-22T16:00:00Z",
+    updatedAt: "2026-08-22T16:00:00Z",
+    status: "Active",
+    notes: "IEC Import Export Code and FSSAI Central License.",
+    services: [
+      {
+        id: "srv-205",
+        customerId: "cust-104",
+        serviceName: "Import Export Code (IEC) Issuance",
+        serviceCategory: "Licensing",
+        feeAmount: 3500,
+        paidAmount: 3500,
+        paymentStatus: "Paid",
+        paymentMode: "UPI",
+        serviceDate: "2026-08-22",
+        invoiceNumber: "INV-2026-004",
+        notes: "DGFT approved."
+      },
+      {
+        id: "srv-206",
+        customerId: "cust-104",
+        serviceName: "FSSAI Food Business License",
+        serviceCategory: "Documentation",
+        feeAmount: 8500,
+        paidAmount: 8500,
+        paymentStatus: "Paid",
+        paymentMode: "Bank Transfer",
+        serviceDate: "2026-08-24",
+        invoiceNumber: "INV-2026-005",
+        notes: "Valid for 5 years."
+      }
+    ]
+  }
+];
