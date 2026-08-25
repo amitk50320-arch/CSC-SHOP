@@ -6,3 +6,11 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Gradle / Android ignores
+.gradle/
+local.properties
+.idea/
+*.iml
+.cxx/
+app/build/
